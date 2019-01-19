@@ -43,6 +43,13 @@ const homepageHTML = `
 			margin-bottom: 20px;
 		}
 
+		.packages code {
+			-webkit-user-select: all;
+			-moz-user-select: all;
+			-ms-user-select: all;
+			user-select: all;
+		}
+
 		pre {
 			background: #ddd;
 			padding: 15px;

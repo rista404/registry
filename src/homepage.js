@@ -99,6 +99,7 @@ const homepageHTML = `
 		<ul class="packages">
 			${
 				Object.entries(DATABASE)
+					.sort(([nameA], [nameB]) => nameA.localeCompare(nameB))
 					.map(([name, { repo }]) =>
 						`<li><code>https://deno.land/x/<b>${name}</b>/</code> — <a href="${repo}">Repo</a></li>`
 					)

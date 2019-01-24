@@ -78,7 +78,7 @@ exports.lambdaHandler = (event, context, callback) => {
   const response = {
     status: "302",
     headers: {
-      "location": [
+      location: [
         {
           key: "Location",
           value: l

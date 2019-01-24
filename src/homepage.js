@@ -9,7 +9,7 @@ const homepageHTML = `
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Deno packages</title>
+	<title>Deno modules</title>
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<style>
 		body {
@@ -38,12 +38,12 @@ const homepageHTML = `
 			font-size: 0.9em;
 		}
 
-		.packages li {
+		.modules li {
 			font-size: 0.9em;
 			margin-bottom: 20px;
 		}
 
-		.packages code {
+		.modules code {
 			-webkit-user-select: all;
 			-moz-user-select: all;
 			-ms-user-select: all;
@@ -88,15 +88,15 @@ const homepageHTML = `
 <body>
 	<main>
 		<img src="${LOGO_PATH}" width="150px" />
-		<h1>Deno Packages</h1>
+		<h1>Deno Modules</h1>
 		<p>This is a URL redirection service for Deno scripts.</p>
 		<p>
-			The basic format is <code>https://deno.land/x/PACKAGE_NAME@BRANCH/SCRIPT.ts</code>. If you leave out the branch, it will default to master.
+			The basic format is <code>https://deno.land/x/MODULE_NAME@BRANCH/SCRIPT.ts</code>. If you leave out the branch, it will default to master.
 		</p>
 
-		<h2 id="available-packages">Available Packages</h2>
+		<h2>Modules</h2>
 
-		<ul class="packages">
+		<ul class="modules">
 			${
 				Object.entries(DATABASE)
 					.sort(([nameA], [nameB]) => nameA.localeCompare(nameB))
@@ -110,7 +110,7 @@ const homepageHTML = `
 		<br />
 		<h2 id="contributing">Contributing</h2>
 
-		<p>To add a package send a pull request to <a href="https://github.com/denoland/registry">https://github.com/denoland/registry</a> with changes in <code>src/database.json</code></p>
+		<p>To add a module send a pull request to <a href="https://github.com/denoland/registry">https://github.com/denoland/registry</a> with changes in <code>src/database.json</code></p>
 	</main>
 </body>
 </html>
